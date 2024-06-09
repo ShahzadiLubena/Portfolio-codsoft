@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: rgb(248, 251, 253);
+}
+#header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(pics/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 9px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+     position: relative; 
+text-shadow: 0 10px 10px whitesmoke;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transition: 0.6s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.text {
+    margin: 20px;
+    font-size: 30px; 
+}
+
+.text h1 span{
+    color: rgb(179, 3, 3);
+}
+.separation1{
+    height: 6px;
+        background-color: rgba(128, 128, 128, 0.425);
+        opacity: 0.44;
+        width: 100vw;
+    }
+    #about h1{
+        text-align: center;
+        margin: 23px;
+        font-size: 43px;
+    }
+    #about p{
+        margin: 23px 50px;
+        font-size: 20px;
+       
+        
+
+    }
+ .box{
+    border: 3px solid rgb(153, 12, 12);
+    height: 30vh;
+    width: 15vw;
+    margin: 10px 30px;
+    padding: 20px 23px;
+    /* position: relative; */
+   
+    flex-direction: column;
+    box-shadow: 10px 10px 10px 2px rgb(247, 47, 47);
+    border-radius: 15px;
+    
+ } 
+  .tab-titles{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ } 
+ .box h2::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transition: 0.6s;
+
+}
+.box h2:hover::after{
+    width: 100%;
+ }
+    .box span{
+        color: red;
+        cursor: pointer;
+        /* font-size: 25px; */
+    }
+    .box h2:hover{
+        text-shadow: 0px 10px 10px red;
+    }
+    .box ul li{
+        margin: 12px;
+    }
+    /* ................Services........... */
+    .separation2{
+        height: 6px;
+            background-color: rgba(128, 128, 128, 0.425);
+            opacity: 0.44;
+            margin: 20px;
+        }
+
+    #services{
+        padding: 30px 0;
+
+    }
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+    .services-list div{
+        background: rgba(128, 128, 128, 0.308);
+        padding: 40px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: background 0.5s, transform 0.5s;
+
+    }
+    .container h1{
+        font-size: 60px;
+        margin: 0 33px;
+    }
+    .services-list div img{
+        margin-bottom: 30px;
+    }
+    .services-list div h2{
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .services-list div a{
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .services-list div:hover{
+        background-color: rgb(116, 4, 4);
+        transform: translateY(-10px);
+    }
+/* .........portfolio........... */
+#portfolio{
+    padding: 50px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+border: 10px;
+position: relative;
+overflow: hidden;
+}
+.work img{
+ width: 394px; 
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.6s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 4px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.6s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+ .layer img{
+    margin-top: 20px;
+    color:#ff004f;
+    font-size: 18px;
+    line-height: 60px;
+    text-decoration: none;
+    background: white;
+    width: 28px;
+    height: 20px;
+    border-radius: 20px;
+} 
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/* ................contact............. */
+.link img{
+    margin: 0 33px;
+}
+.link img:hover{
+    width: 50px;
+    transition: all ease-out 0.2s;
+    
+}
+.contact-left{
+flex-basis: 35%;
+}
+
+.contact-left h1{
+    text-align: center;
+}
+.contact-left p{
+    /* margin-top: 30px; */
+    font-size: 21px;
+     margin: 43px 123px; 
+}
+.btn.btn2:hover{
+width: 120px;
+background-color: #830d0d;
+border-radius:25px ;
+padding: 13px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background-color: #b60a0a;
+    text-decoration: none;
+    margin: 0 50%;
+    width: 120px;
+    padding: 15px;
+    border-radius: 21px;
+    color: black;
+    font-size: 20px;
+}
+
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    /* background-color: rgba(128, 128, 128, 0.281); */
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.281);
+    color: white;
+    font-size: 16px;
+}
+#contact-box form{
+    width: 40%;
+    margin: 48px;
+}
+
+.submit button{
+    /* margin: 10px; */
+    margin: 40px 48%;
+    padding: 11px;
+    width: 15%;
+    border-radius: 17px;
+    background-color: #b60a0a;
+    font-size: 18px;
+    cursor: pointer;
+}
+footer{
+
+    background-color: rgba(128, 128, 128, 0.226);
+    color: aliceblue;
+    margin: 50px;
+    width: 100vw;
+    padding: 2px;
+}
+footer .center{
+    text-align: center;
+}
+/* ............css for small screens........... */
+nav .img1{
+display: none;
+
+}
+@media only screen and (max-width: 913px) {
+     #header{
+        background-image: url("pics/media bg.png");
+    } 
+    .text{
+        margin-top: 10% ;
+        
+        font-size: 16px;
+    }
+    .text h1{
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+   .tab-titles{
+   /* margin-bottom: 100%; */
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ 
+   
+    /* background-color: red;   */
+    }
+    .submit button{
+        width: 90px;
+    }
+    .btn.btn2{
+        margin-top: 20px;
+    }
+    .box{
+height: 43vh;
+width: 24vw;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+}
